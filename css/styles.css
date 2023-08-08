@@ -84,6 +84,8 @@ img {
     background-color: var(--accent-color);
     border: none;
     border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -93,6 +95,7 @@ img {
     padding-left: 22px;
     padding-right: 22px;
 
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.63;
     letter-spacing: 0.48px;
@@ -500,7 +503,7 @@ header {
     margin-left: 70px;
 }
 
-.footer .social-title {
+.footer-title {
     margin-bottom: 20px;
 
     color: var(--contrast-text-color);
@@ -520,6 +523,51 @@ header {
 
 .footer .social-link {
     background-color: rgba(255, 255, 255, 0.10);
+}
+
+.footer-form {
+    margin-left: 93px;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-field {
+    width: 358px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-field::placeholder {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.48px;
+}
+
+.subscribe-icon {
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.subscribe-btn {
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
 }
 
 /* portfolio */
@@ -650,7 +698,7 @@ header {
 .modal-box {
     position: relative;
     transform: scale(1);
-    
+
     width: 528px;
     height: 581px;
 
@@ -680,10 +728,7 @@ header {
 }
 
 .modal-close:hover,
-.modal-close:focus {
-    background-color: var(--logo-text-color);
-    border-color: var(--logo-text-color);
-}
+.modal-close:focus {}
 
 .close-icon {
     width: 18px;
@@ -703,5 +748,144 @@ header {
 
 .modal-close:hover .close-icon,
 .modal-close:focus .close-icon {
-    fill: var(--contrast-text-color);
+    fill: var(--accent-color);
+}
+
+.modal-form {
+    padding: 40px;
+}
+
+.form-title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: 12px;
+}
+
+.fields-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.field-item {
+    width: 100%;
+    text-align: left;
+}
+
+.field-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    letter-spacing: 0.12px;
+}
+
+.form-field {
+    position: relative;
+}
+
+.field {
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    padding-right: 12px;
+
+    font-size: 12px;
+    letter-spacing: 0.12px;
+
+    background: none;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within .field {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+
+.form-field:focus-within .form-icon {
+    fill: var(--accent-color);
+}
+
+.comment .field {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+}
+
+.policy {
+    position: relative;
+    padding-left: 37px;
+    vertical-align: baseline;
+}
+
+.policy-label {
+    color: var(--primary-text-color);
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+}
+
+.policy-check {
+    position: absolute;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+}
+
+.checkbox {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 15px;
+    top: 4px;
+
+    padding: 2px;
+
+    background-image: url(../images/svg/icon\ border.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-check:checked+.checkbox {
+    background-image: url(../images/svg/icon\ check.svg);
+}
+
+.policy-link {
+    color: var(--accent-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    text-decoration-line: underline;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-link:hover,
+.policy-link:focus {
+    color: var(--title-color);
+}
+
+.form-btn {
+    padding-left: 52px;
+    padding-right: 52px;
 }
