@@ -703,6 +703,7 @@ header {
     transform: scale(1);
 
     width: 528px;
+    height: 581px;
 
     background-color: var(--primary-bg-color);
     border-radius: 4px;
@@ -791,6 +792,7 @@ header {
 }
 
 .field {
+    height: 40px;
     width: 100%;
     padding-top: 11px;
     padding-bottom: 11px;
@@ -830,6 +832,7 @@ header {
     height: 120px;
     padding: 12px 16px;
     resize: none;
+    margin-bottom: 20px;
 }
 
 .policy {
@@ -901,6 +904,7 @@ label.policy:focus-within .border, label.policy:focus-within .checked {
 }
 
 .form-btn {
+    height: 50px;
     padding-left: 52px;
     padding-right: 52px;
 }
